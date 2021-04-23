@@ -56,5 +56,17 @@ public class ValidationUnitTest {
 		boolean isValidPhoneNo = ValidateUser.isValidPhoneNo(phoneNo);
 		assertFalse(isValidPhoneNo);
 	}
+	@Test
+	public void testpassWord_shouldReturnTrue() {
+		String password = "Nong";
+		boolean isValidPwd = ValidateUser.isValidPassword(password);
+		assertTrue(isValidPwd);
+	}
+	@Test
+	public void testpassWord_shouldReturnFalse() {
+		String password = "Nong";
+		boolean isValidPwd = ValidateUser.isValidPassword(password);
+		assertFalse(isValidPwd);
+	}
 }
 	

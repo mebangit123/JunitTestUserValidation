@@ -37,5 +37,10 @@ public final class ValidateUser {
 		Matcher m = pat.matcher(phoneNo);
 		return(m.matches());
 	}
-
+	public static boolean isValidPassword(String password) {
+		String passRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+		Pattern pat = Pattern.compile(passRegex);
+		Matcher m = pat.matcher(password);
+		return(m.matches());
+	}
 }
