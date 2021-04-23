@@ -44,4 +44,17 @@ public class ValidationUnitTest {
 		boolean isValidEmail = ValidateUser.isValidEmail(email);
 		assertFalse(isValidEmail);
 	}
+	@Test
+	public void testPhoneNo_shouldReturnTrue() {
+		String phoneNo = "23 7895436524";
+		boolean isValidPhoneNo = ValidateUser.isValidPhoneNo(phoneNo);
+		assertTrue(isValidPhoneNo);
+	}
+	@Test
+	public void testPhoneNo_shouldReturnFalse() {
+		String phoneNo = "Nong";
+		boolean isValidPhoneNo = ValidateUser.isValidPhoneNo(phoneNo);
+		assertFalse(isValidPhoneNo);
+	}
 }
+	
