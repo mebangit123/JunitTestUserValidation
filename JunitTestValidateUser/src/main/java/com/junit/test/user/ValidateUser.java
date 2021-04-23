@@ -19,5 +19,16 @@ public final class ValidateUser {
 		
 		return valid;
 	}
+	
+	public static boolean isValidLastName(String lastName) {
+		boolean valid = false;
+		String lnameRegex = "^[A-Z]{1}[a-zA-Z]{2,}$";
+		Pattern pat = Pattern.compile(lnameRegex);
+		Matcher m = pat.matcher(lastName);
+		if(m.matches())
+		valid = true;
+		
+		return valid;
+	}
 
 }

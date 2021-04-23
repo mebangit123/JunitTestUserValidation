@@ -18,4 +18,17 @@ public class ValidationUnitTest {
 		boolean isValidFirstName = ValidateUser.isValidFirstName(firstName);
 		assertFalse(isValidFirstName);
 	}
+	
+	@Test
+	public void testLastName_shouldReturnTrue() {
+		String lastName = "Nong";
+		boolean isValidLastName = ValidateUser.isValidFirstName(lastName);
+		assertTrue(isValidLastName);
+	}
+	@Test
+	public void testLastName_shouldReturnFalse() {
+		String lastName = "N@";
+		boolean isValidLastName = ValidateUser.isValidFirstName(lastName);
+		assertFalse(isValidLastName);
+	}
 }
