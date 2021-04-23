@@ -25,7 +25,7 @@ public final class ValidateUser {
 	}
 	
 	public static boolean isValidEmail(String email) {
-		String emailRegex = "^[0-9A-Za-z]+([._+-][0-9a-zA-Z]+)*@[A-Za-z0-9]+.[a-zA-Z]{2,3}([.][a-zA-Z]{2})*$";
+		String emailRegex = "^[0-9A-Za-z]+([._+-][0-9a-zA-Z]+)*@{1}[A-Za-z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3}){0,1}$";
 		Pattern pat = Pattern.compile(emailRegex);
 		Matcher m = pat.matcher(email);
 		return(m.matches());
