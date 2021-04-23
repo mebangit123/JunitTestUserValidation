@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class ValidationUnitTest {
+	
 	@Test
 	public void testFirstName_shouldReturnTrue() {
 		String firstName = "Meban";
@@ -18,7 +19,6 @@ public class ValidationUnitTest {
 		boolean isValidFirstName = ValidateUser.isValidFirstName(firstName);
 		assertFalse(isValidFirstName);
 	}
-	
 	@Test
 	public void testLastName_shouldReturnTrue() {
 		String lastName = "Nong";
@@ -30,5 +30,18 @@ public class ValidationUnitTest {
 		String lastName = "N@";
 		boolean isValidLastName = ValidateUser.isValidFirstName(lastName);
 		assertFalse(isValidLastName);
+	}
+	
+	@Test
+	public void testEmail_shouldReturnTrue() {
+		String email = "meban23@abc.okj";
+		boolean isValidEmail = ValidateUser.isValidEmail(email);
+		assertTrue(isValidEmail);
+	}
+	@Test
+	public void testEmail_shouldReturnFalse() {
+		String email = "Nong";
+		boolean isValidEmail = ValidateUser.isValidEmail(email);
+		assertFalse(isValidEmail);
 	}
 }

@@ -10,25 +10,27 @@ public final class ValidateUser {
 	}
 	
 	public static boolean isValidFirstName(String firtName) {
-		boolean valid = false;
 		String fnameRegex = "^[A-Z]{1}[a-zA-Z]{2,}$";
 		Pattern pat = Pattern.compile(fnameRegex);
 		Matcher m = pat.matcher(firtName);
-		if(m.matches())
-		valid = true;
-		
-		return valid;
+		return(m.matches());
 	}
 	
 	public static boolean isValidLastName(String lastName) {
-		boolean valid = false;
 		String lnameRegex = "^[A-Z]{1}[a-zA-Z]{2,}$";
 		Pattern pat = Pattern.compile(lnameRegex);
 		Matcher m = pat.matcher(lastName);
-		if(m.matches())
-		valid = true;
+		return(m.matches());
 		
-		return valid;
+	}
+	
+	public static boolean isValidEmail(String email) {
+		
+		String emailRegex = "^[0-9A-Za-z]+([._+-][0-9a-zA-Z]+)*@[A-Za-z0-9]+.[a-zA-Z]{2,3}([.][a-zA-Z]{2})*$";
+		Pattern pat = Pattern.compile(emailRegex);
+		Matcher m = pat.matcher(email);
+		return(m.matches());
+		
 	}
 
 }
